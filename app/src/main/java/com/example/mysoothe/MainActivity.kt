@@ -198,6 +198,8 @@ fun AlignYourBodyElementPreview() {
         AlignYourBodyElement(
             text = R.string.ab1_inversions,
             drawable =R.string.ab1_inversions,
+
+
             modifier = Modifier.padding(8.dp)
         )
     }
