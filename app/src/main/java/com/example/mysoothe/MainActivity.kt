@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.paddingFromBaseline
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
@@ -27,6 +28,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
@@ -101,16 +103,24 @@ fun AlignYourBodyElement(
 // Step: Favorite collection card - Material Surface
 @Composable
 fun FavoriteCollectionCard(
+    @DrawableRes drawable: Int,
+    @StringRes text: Int,
     modifier: Modifier = Modifier
 ) {
     Surface(
         shape = MaterialTheme.shapes.medium,
         modifier = modifier
     ) {
-        Row {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = modifier.width(255.dp)
+        ) {
             Image(
                 painter = painterResource(R.drawable.fc2_nature_meditations),
-                contentDescription = null
+                contentDescription = null,
+                contentScale = ContentScale.Crop,
+                modifier = modifier.size(80.dp)
+
             )
             Text( text = stringResource(R.string.fc2_nature_meditations))
         }
@@ -225,6 +235,8 @@ fun AlignYourBodyElementPreview() {
 fun FavoriteCollectionCardPreview() {
     MySootheTheme {
         FavoriteCollectionCard(
+            text = R.string.fc2_nature_meditations,
+            drawable = R.drawable.fc2_nature_meditations,
             modifier = Modifier.padding(8.dp)
         )
     }
