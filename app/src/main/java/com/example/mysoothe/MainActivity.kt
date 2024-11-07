@@ -182,7 +182,7 @@ fun HomeSection(
     Column( modifier ) {
         Text(
             text = stringResource(title).uppercase(),
-            style = MaterialTheme.typography.titleMedium,
+            style = MaterialTheme.typography.titleMedium ,
             modifier = Modifier
                 .paddingFromBaseline(top = 40.dp, bottom = 16.dp)
                 .padding(horizontal = 16.dp)
@@ -314,7 +314,7 @@ fun HomeSectionPreview() {
     }
 }
 
-@Preview(showBackground = true, backgroundColor = 0xFFF5F0EE , heightDp = 180)
+@Preview(showBackground = true, backgroundColor = 0xFFF5F0EE )
 @Composable
 fun ScreenContentPreview() {
     MySootheTheme { HomeScreen() }
