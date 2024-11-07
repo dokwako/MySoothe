@@ -93,7 +93,7 @@ fun AlignYourBodyElement(
         modifier = modifier
     ){
         Image(
-            painter = painterResource(R.drawable.ab1_inversions,),
+            painter = painterResource(drawable),
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = modifier
@@ -101,7 +101,7 @@ fun AlignYourBodyElement(
                 .clip(CircleShape)
         )
         Text(
-            text = stringResource(R.string.ab1_inversions),
+            text = stringResource(text),
             modifier = modifier.paddingFromBaseline(top = 24.dp, bottom = 8.dp ),
             style = MaterialTheme.typography.bodyMedium
         )
@@ -124,13 +124,13 @@ fun FavoriteCollectionCard(
             modifier = modifier.width(255.dp)
         ) {
             Image(
-                painter = painterResource(R.drawable.fc2_nature_meditations),
+                painter = painterResource(drawable),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier = modifier.size(80.dp)
 
             )
-            Text( text = stringResource(R.string.fc2_nature_meditations))
+            Text( text = stringResource(text))
         }
 
     }
@@ -204,9 +204,7 @@ fun HomeScreen(modifier: Modifier = Modifier) {
         HomeSection(title = R.string.favorite_collections) {
             FavoriteCollectionsGrid()
         }
-
         Spacer(Modifier.height(16.dp))
-
     }
 
 }
@@ -316,7 +314,7 @@ fun HomeSectionPreview() {
     }
 }
 
-@Preview(showBackground = true, backgroundColor = 0xFFF5F0EE)
+@Preview(showBackground = true, backgroundColor = 0xFFF5F0EE , heightDp = 180)
 @Composable
 fun ScreenContentPreview() {
     MySootheTheme { HomeScreen() }
