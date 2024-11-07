@@ -243,9 +243,11 @@ private fun SootheBottomNavigation(modifier: Modifier = Modifier) {
             },
             label = {
                 Text(
-
+                    text = stringResource(R.string.bottom_navigation_profile)
                 )
-            }
+            },
+            selected = false,
+            onClick = {}
         )
     }
 }
