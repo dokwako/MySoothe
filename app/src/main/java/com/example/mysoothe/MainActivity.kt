@@ -162,9 +162,9 @@ fun FavoriteCollectionsGrid(
     LazyHorizontalGrid(
         rows = GridCells.Fixed(2),
         contentPadding = PaddingValues(horizontal = 16.dp),
-        horizontalArrangement = Arrangement.spacedBy(16.dp),
-        verticalArrangement  = Arrangement.spacedBy(16.dp),
-        modifier =modifier.height(168.dp)
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        verticalArrangement  = Arrangement.spacedBy(8.dp),
+        modifier =modifier.height(120.dp)
     ) {
         items(favoriteCollectionsData) { item ->
             FavoriteCollectionCard(item.drawable, item.text, Modifier.height(80.dp))
@@ -181,7 +181,7 @@ fun HomeSection(
 ) {
     Column( modifier ) {
         Text(
-            text = stringResource(title),
+            text = stringResource(title).uppercase(),
             style = MaterialTheme.typography.titleMedium,
             modifier = Modifier
                 .paddingFromBaseline(top = 40.dp, bottom = 16.dp)
