@@ -231,6 +231,7 @@ private fun SootheBottomNavigation(modifier: Modifier = Modifier) {
                 )
             },
             selected = true,
+            onClick = {}
         ) {  },
     }
 }
