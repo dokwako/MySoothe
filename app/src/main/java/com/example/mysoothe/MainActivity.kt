@@ -229,7 +229,8 @@ private fun SootheBottomNavigation(modifier: Modifier = Modifier) {
                 Text(
                     text = stringResource(R.string.bottom_navigation_home)
                 )
-            }
+            },
+            selected = true,
         ) {  },
     }
 }
