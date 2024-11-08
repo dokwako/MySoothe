@@ -317,9 +317,13 @@ private fun SootheNavigationRail(modifier: Modifier = Modifier) {
 @Composable
 fun MySootheAppLandscape(){
     MySootheTheme {
-        Row {
-            SootheNavigationRail()
-            HomeScreen()
+        Surface(
+            color = MaterialTheme.colorScheme.background
+        ) {
+            Row {
+                SootheNavigationRail()
+                HomeScreen()
+            }
         }
     }
 }
