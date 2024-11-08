@@ -49,6 +49,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.material.icons.filled.Spa
+import androidx.compose.material3.NavigationRail
+import androidx.compose.material3.NavigationRailItem
 import com.example.mysoothe.ui.theme.MySootheTheme
 
 class MainActivity : ComponentActivity() {
@@ -270,7 +272,36 @@ fun MySootheAppPortrait() {
 // Step: Bottom navigation - Material
 @Composable
 private fun SootheNavigationRail(modifier: Modifier = Modifier) {
-    // Implement composable here
+    NavigationRail() {
+        Column() {
+            NavigationRailItem(
+                icon = {
+                    Icon(
+                        imageVector = Icons.Default.Spa,
+                        contentDescription = null
+                    )
+                },
+                label = {
+                    Text(stringResource(R.string.bottom_navigation_home))
+                },
+                selected = true,
+                onClick = {}
+            )
+        }
+        NavigationRailItem(
+            icon = {
+                Icon(
+                    imageVector = Icons.Default.Spa,
+                    contentDescription = null
+                )
+            },
+            label = {
+                Text(stringResource(R.string.bottom_navigation_profile))
+            },
+            selected = false,
+            onClick = {}
+        )
+    }
 }
 
 // Step: Landscape Mode
