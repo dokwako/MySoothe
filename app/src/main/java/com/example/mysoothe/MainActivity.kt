@@ -272,8 +272,15 @@ fun MySootheAppPortrait() {
 // Step: Bottom navigation - Material
 @Composable
 private fun SootheNavigationRail(modifier: Modifier = Modifier) {
-    NavigationRail() {
-        Column() {
+    NavigationRail(
+        modifier = modifier.padding(start = 8.dp, end = 8.dp),
+        containerColor = MaterialTheme.colorScheme.background
+    ) {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
             NavigationRailItem(
                 icon = {
                     Icon(
@@ -287,20 +294,22 @@ private fun SootheNavigationRail(modifier: Modifier = Modifier) {
                 selected = true,
                 onClick = {}
             )
+
+            Spacer(modifier = modifier.height(8.dp))
+            NavigationRailItem(
+                icon = {
+                    Icon(
+                        imageVector = Icons.Default.AccountCircle,
+                        contentDescription = null
+                    )
+                },
+                label = {
+                    Text(stringResource(R.string.bottom_navigation_profile))
+                },
+                selected = false,
+                onClick = {}
+            )
         }
-        NavigationRailItem(
-            icon = {
-                Icon(
-                    imageVector = Icons.Default.Spa,
-                    contentDescription = null
-                )
-            },
-            label = {
-                Text(stringResource(R.string.bottom_navigation_profile))
-            },
-            selected = false,
-            onClick = {}
-        )
     }
 }
 
