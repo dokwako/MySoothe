@@ -48,6 +48,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.material.icons.filled.Spa
 import com.example.mysoothe.ui.theme.MySootheTheme
 
 class MainActivity : ComponentActivity() {
@@ -222,8 +223,8 @@ private fun SootheBottomNavigation(modifier: Modifier = Modifier) {
         NavigationBarItem(
             icon = {
                 Icon(
-                    ImageVector = Icons.Default.Spa,
-                    contentDescription =null
+                    imageVector = Icons.Default.Spa,
+                    contentDescription = null
                 )
             },
             label = {
