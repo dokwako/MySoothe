@@ -316,7 +316,12 @@ private fun SootheNavigationRail(modifier: Modifier = Modifier) {
 // Step: Landscape Mode
 @Composable
 fun MySootheAppLandscape(){
-    // Implement composable here
+    MySootheTheme {
+        Row {
+            SootheNavigationRail()
+            HomeScreen()
+        }
+    }
 }
 
 // Step: MySoothe App
